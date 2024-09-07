@@ -1,0 +1,17 @@
+<table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Designation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of formData">
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.designation }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

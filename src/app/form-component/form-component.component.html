@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text" />
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+        Name is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" type="number" />
+      <div *ngIf="form.get('age')?.invalid && form.get('age')?.touched">
+        Age must be a positive number.
+      </div>
+    </div>
+  
+    <div>
+      <label for="designation">Designation:</label>
+      <input id="designation" formControlName="designation" type="text" />
+      <div *ngIf="form.get('designation')?.invalid && form.get('designation')?.touched">
+        Designation is required.
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+  
